@@ -1,0 +1,317 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(http-equiv="X-UA-Compatible", content="IE=7")
+        title Tajem Creative
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700,900%7CHammersmith+One%7CPlayfair+Display:400,700,900&display=swap")
+        link(rel="icon" type="image/icon" sizes="32x32" href="images/favicon.ico")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.0.13/css/all.css")
+        link(rel="stylesheet", href="css/main.css")
+    body
+        header.header.anchor#home(data-anchor='first')
+            .container
+                nav.header__nav
+                    a.header__logo(href="#")
+                        img.header__logo-img(src="images/logo.png", alt="Tajam logo")
+                    ul.header__nav-list
+                        li.header__nav-item: a.header__nav-link.active(href="#home", data-scroll='first') Home
+                        li.header__nav-item: a.header__nav-link(href="#about", data-scroll='second') About
+                        li.header__nav-item: a.header__nav-link(href="#expertise", data-scroll='thirst') Expertise
+                        li.header__nav-item: a.header__nav-link(href="#teams", data-scroll='four') Teams
+                        li.header__nav-item: a.header__nav-link(href="#works", data-scroll='five') Works
+                        li.header__nav-item: a.header__nav-link(href="#people-say", data-scroll='six') People say
+                        li.header__nav-item: a.header__nav-link(href="#contact", data-scroll='seven') Contact
+                    button.header__mobile-menu(aria-label="toggle navigation")
+                        span.header__mobile-menu-burger
+                .header__home
+                    .container
+                        .row
+                            .col-12.offset-md-1.col-md-10
+                                h2.header__home-title We are awesome creative agency
+                                .line-decor
+                                p.header__home-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                                a.link-btn.header__home-btn(href="#") Learn more
+        main.main-content
+            section.section-about.anchor#about(data-anchor='second')
+                .container
+                    div.row    
+                        div.col-12.col-md-5.section__about-img
+                            img(src="images/left.png", alt="This is Tajam logo image").section__about-image
+                        div.col-12.col-md-7.section__about-content
+                            h2.section__about-title Our story
+                            p.section__about-text
+                                | This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. 
+                                | Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. 
+                                | Duis sed odio sit amet nibh vulputate cursus
+                            p.section__about-text
+                                | Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. 
+                                | Sed non  mauris vitae erat consequat auctor eu in elit. 
+                                | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            a.section__about-btn.link-btn(href="#") Learn more
+                .video
+                    .container
+                        .row
+                            .col.video__content
+                                .video__block
+                                    button.video__play
+                                        span.video__play-btn
+                                    h2.video__title Watch our story
+                        .modal-window
+                            .modal-window__video
+                                button.modal-window__video-close &times;
+                                .modal-window__video-content
+                                    iframe.modal-window__video-visible(src="https://www.youtube.com/embed/KvUgaHTNit4", allow="accelerometer; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+
+            section.expertise.anchor#expertise(data-anchor='thirst')
+                .container
+                    .row
+                        .col.expertise__head
+                            h2.expertise__head-title Expertise
+                            p.expertise__head-text Lorem ipsum dolor sit amet proin gravida nibh vel velit
+                            .expertise__head-line
+                    .expertise__list
+                        .row
+                            .col-12.col-sm-6.col-lg-4.expertise__item
+                                //- Мой Adove XD не отобразил данное изображение корректно, пришлось ставить, что есть. И я не смог изображения склеить в спрайты. Спасибо за понимание.
+                                img(src="images/comp.png", alt="computer icon").expertise__item-img 
+                                h4.expertise__item-title WEB DESIGN &amp; DEVELOPMENT
+                                p.expertise__item-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
+                            .col-12.col-sm-6.col-lg-4.expertise__item
+                                img(src="images/brush.png", alt="brush icon").expertise__item-img
+                                h4.expertise__item-title BRANDING IDENTIT
+                                p.expertise__item-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
+                            .col-12.col-sm-6.col-lg-4.expertise__item
+                                img(src="images/mobile.png", alt="mobile icon").expertise__item-img
+                                h4.expertise__item-title MOBILE APP
+                                p.expertise__item-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
+                            .col-12.col-sm-6.col-lg-4.expertise__item.expertise__item-block
+                                img(src="images/part.png", alt="schedule icon").expertise__item-img
+                                h4.expertise__item-title SEARCH ENGINE OPTIMIZATION
+                                p.expertise__item-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
+                            .col-12.col-sm-6.col-lg-4.expertise__item.expertise__item-block
+                                img(src="images/prist.png", alt="console icon").expertise__item-img
+                                h4.expertise__item-title GAME DEVELOPMENT
+                                p.expertise__item-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
+                            .col-12.col-sm-6.col-lg-4.expertise__item.expertise__item-block
+                                img(src="images/heart.png", alt="heart icon").expertise__item-img
+                                h4.expertise__item-title MADE WITH LOVE
+                                p.expertise__item-text This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.
+
+            section.section-teams.anchor#teams(data-anchor='four')
+                .container
+                    .row
+                        .col-sm-6.section-teams__item
+                            h2.section-teams__item-title MEET OUR AMAZING TEAM
+                            p.section-teams__item-text Lorem ipsum dolor sit amet proin gravida nibh vel velit
+                            .teams-line
+                    .row.section-teams__cards
+                        .col-12.col-sm-6.col-lg-3.section-teams__cards-item
+                            img(src="images/image.png", alt="portfolio photo").section-teams__cards-foto
+                            h5.section-teams__cards-name SEMF UCUK
+                            p.section-teams__cards-profession CEO &amp; FOUNDER
+                        .col-12.col-sm-6.col-lg-3.section-teams__cards-item 
+                            img(src="images/image.png", alt="portfolio photo").section-teams__cards-foto
+                            h5.section-teams__cards-name DIK ADALIN
+                            p.section-teams__cards-profession ENGINEERING
+                        .col-12.col-sm-6.col-lg-3.section-teams__cards-item
+                            img(src="images/image.png", alt="portfolio photo").section-teams__cards-foto
+                            h5.section-teams__cards-name JENG KOL
+                            p.section-teams__cards-profession DESIGNER
+                        .col-12.col-sm-6.col-lg-3.section-teams__cards-item 
+                            img(src="images/image.png", alt="portfolio photo").section-teams__cards-foto
+                            h5.section-teams__cards-name PET ROMAK
+                            p.section-teams__cards-profession MARKETING
+                    .section-teams__cards-content
+                        p.section-teams__cards-text Become part of our dream team, let’s join us ! 
+                        a(href="#").link-btn.section-teams__cards-btn WE ARE HIRING
+
+            section.works.anchor#works(data-anchor='five')
+                .container  
+                    .row
+                        .col.works__head
+                            h2.works__title Our works
+                            a.works__link(href="#") See All Project in dribbble
+                .container-fluid 
+                    ul.row.works__portfolio
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                        li.col-12.col-sm-6.col-md-3.col-lg-2.works__portfolio-item
+                            a(href="#").works__portfolio-link
+                                .works__portfolio-content
+                .container
+                    .row
+                        .col.works__button
+                            a(href="#").link-btn.works__btn Load more
+
+            section.people-say.anchor#people-say(data-anchor='six')
+                .container
+                    .row    
+                        .col-12.offset-md-1.col-md-10.people-say__block
+                            ul.people-say__list
+                                li.people-say__item
+                                    p.people-say__opinion This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    p.people-say__name Full NAME
+                                    p.people-say__position POSITION
+                                li.people-say__item
+                                    p.people-say__opinion This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    p.people-say__name Full NAME
+                                    p.people-say__position POSITION
+                                li.people-say__item
+                                    p.people-say__opinion This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    p.people-say__name JANE GALADRIEL
+                                    p.people-say__position CEO TENGKUREP
+                                li.people-say__item
+                                    p.people-say__opinion This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    p.people-say__name Full NAME
+                                    p.people-say__position POSITION
+                                li.people-say__item
+                                    p.people-say__opinion This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    p.people-say__name Full NAME
+                                    p.people-say__position POSITION
+                    .row
+                        .col-12.offset-md-1.col-md-10.people-say__slider-block
+                            ul.people-say__slider-list
+                                li.people-say__slider-item
+                                    button.userpic-dot__btn 
+                                        img(src="images/user-pic-dot-1.png").people-say__nav-slider-img
+                                li.people-say__slider-item
+                                    button.userpic-dot__btn 
+                                        img(src="images/user-pic-dot-2.png").people-say__nav-slider-img
+                                li.people-say__slider-item
+                                    button.userpic-dot__btn 
+                                        img(src="images/user-pic-dot-3.png").people-say__nav-slider-img
+                                li.people-say__slider-item
+                                    button.userpic-dot__btn 
+                                        img(src="images/user-pic-dot-4.png").people-say__nav-slider-img
+                                li.people-say__slider-item
+                                    button.userpic-dot__btn 
+                                        img(src="images/user-pic-dot-5.png").people-say__nav-slider-img
+
+            section.contact-us.anchor#contact(data-anchor='seven')
+                .container
+                    .row
+                        .col-12.offset-md-2.col-md-8.offset-lg-3.col-lg-6.contact-us__head
+                            h2.contact-us__title Give us a good news
+                    .row
+                        form.col-12.offset-md-2.col-md-8.offset-lg-3.col-lg-6.contact-us-form(action="/", method="POST")
+                            input.contact-us__input(type="text", name='name', placeholder='Name')
+
+                            input.contact-us__input(type="email", name='email', placeholder='Email')
+
+                            input.contact-us__input(type="text", name='subject', placeholder='Subject')
+
+                            textarea.contact-us__massage(name="massage", placeholder='Your Massage')
+
+                            input.link-btn(type="submit", name='submit', value="Submit")
+
+        footer.footer
+            .container
+                .row.footer__main
+                    .col-12.col-lg-4.footer__block
+                        a.header__logo(href="#")
+                            img.header__logo-img(src="images/logo.png", alt="Tajam")
+                        p.footer__text
+                            | lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit.
+                            | Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
+                        ul.footer__list
+                            li.footer__item: a.footer__link(href="#") Help
+                            li.footer__item: a.footer__link(href="#") Terms &amp; Condition
+                            li.footer__item: a.footer__link(href="#") Privacy
+                    .col-12.col-md-6.col-lg-4.footer__block
+                        h6.footer__address-head OUR STUDIO
+                        address.footer__address
+                            ul.footer__address-list
+                                li.footer__address-item
+                                    .footer__icon-block
+                                        .footer__icon-marker
+                                            img(src="images/place.png", alt="Place marker").footer__icon-img
+                                    | Ruko cucruk, Jl. Radio luar dalem jos<br>
+                                    | No.12 - 13, Kalideres - Jakarta Barat<br>
+                                    | 11480 - Indonesia
+                                li.footer__tel
+                                    .footer__icon-block
+                                        .footer__icon-telephone
+                                            img(src="images/phone-icon.png", alt="Phone icon").footer__icon-img
+                                    a(href="tel:622122243333").footer__tel-link (+62)&nbsp;21-2224 3333
+                    .col-12.col-md-6.col-lg-4.footer__social
+                        h6.footer__address-head STAY IN TOUCH
+                        form.subscribe(action="/", method="post")
+                            input.subscribe__input(type="email", placeholder='Subscribe our newsletter')
+                            button.subscribe__btn(type="submit")
+                                img(src="images/paper-plane.png", alt="Paper plane icon")
+                        ul.footer__social-list
+                            li.footer__social-item
+                                a(href="#").footer__social-link
+                                    .footer__social-icon
+                                        <i class="fab fa-facebook-f"></i>
+                            li.footer__social-item
+                                a(href="#").footer__social-link
+                                    .footer__social-icon
+                                        <i class="fab fa-twitter"></i>
+                            li.footer__social-item
+                                a(href="#").footer__social-link
+                                    .footer__social-icon
+                                        <i class="fab fa-dribbble"></i>
+                            li.footer__social-item
+                                a(href="#").footer__social-link
+                                    .footer__social-icon
+                                        <i class="fab fa-instagram"></i>
+                            li.footer__social-item
+                                a(href="#").footer__social-link
+                                    .footer__social-icon
+                                        <i class="fab fa-google-plus-g"></i>
+                            li.footer__social-item
+                                a(href="#").footer__social-link
+                                    .footer__social-icon
+                                        <i class="fab fa-youtube"></i>
+                        .footer__social-copyright Copyright © 2015 - Tajem Creative
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+script(src="js/libs.min.js")
+script(src="dist/main.js")
+script(src="js/main.js")
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+*,*::after,*::before
+    box-sizing: border-box
+    
+html 
+  scroll-behavior: smooth
+  outline: none
+
+
+body 
+    min-width: 320px
+    overflow-x: hidden
+    padding: 0
+    margin: 0
+    font-family: $font-familyR
+
+
+.container
+    max-width: 1290px 
+    margin: 0 auto 
+
+
+::-webkit-scrollbar 
+  width: 10px
+
+
+::-webkit-scrollbar-track 
+  background: #f1f1f1 
+
+ 
+::-webkit-scrollbar-thumb 
+  background: #888 
+
+
+::-webkit-scrollbar-thumb:hover 
+  background: #555 
+
+
+.container-fluid
+    max-width: 1600px
+
+a 
+    text-decoration: none !important
+
+.fab
+    color: #fff
+
+.link-btn
+    text-decoration: none !important
+    font-family: $font-familyH
+    color: $aquamarine
+    font-size: 20px
+    border: 1px solid $aquamarine
+    padding: 8px 12px 8px 12px
+    transition: .3s ease-in-out
+    text-transform: uppercase
+    background: none
+    text-align: center
+    min-width: 140px
+    margin: 0 auto
+    &:hover
+        color: #fff
+        background-color: #00E0D0

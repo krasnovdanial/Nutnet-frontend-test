@@ -1,0 +1,1143 @@
+@import "libs.scss"
+@import "libs.sass"
+@import "libs.scss/normalize.css"
+@import "vars.sass"
+@import "node_modules/bootstrap/scss/_mixins.scss"
+@import "global.sass"
+
+
+.header
+    background-image: url('../images/bg.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    align-items: center
+    height: 670px
+    margin: 0 auto
+    display: block
+    max-width: 100%
+    max-height: 100vh
+    @include media-breakpoint-down(md)
+        min-height: 550px
+    
+
+        
+.header__nav
+    position: fixed
+    width: 100%
+    z-index: 999
+    align-items: center
+    left: 0
+    top: 0
+    text-align: center
+    background: rgba($header-color, 0)
+    max-height: 100vh
+    display: flex
+    justify-content: space-between
+    padding: 15px 130px 15px 130px
+    &.scrollBackgroundColor
+        background: rgba(49, 29, 94, .88) 
+    @include media-breakpoint-down(lg)
+        padding: 15px 20px
+
+.header__logo
+    padding: 0
+
+
+.header__logo-img
+    display: block
+    margin: 0 auto
+    @include media-breakpoint-up(md)
+        display: inline
+
+
+.header__nav-list
+    display: none
+    margin: 0
+    list-style-type: none
+    @include media-breakpoint-up(lg) 
+        display: flex
+        padding: 0
+    
+
+.header__nav-item
+    text-decoration: none
+    font-weight: 900
+    font-size: 13px
+    margin: 0
+    margin: 0
+    @include media-breakpoint-down(md)
+        padding: 0 !important
+    &:nth-child(1n)
+        padding-left: 30px
+
+
+.header__nav-link 
+    padding: 20px 0
+    display: block
+    color: #fff
+    cursor: pointer
+    text-transform: uppercase
+    letter-spacing: .25px
+    text-decoration: $text-decor
+    
+
+.header__mobile-menu
+    display: block
+    padding: 0
+    margin: 0
+    background: none
+    border: none
+    cursor: pointer
+    position: absolute
+    right: 1em
+    top: 1em
+    z-index: 1000
+    position: fixed
+    outline: $outline
+    @include media-breakpoint-up(lg) 
+        &:not(.nav-open) 
+            display: none
+        
+        
+
+
+.header__mobile-menu-burger
+    background: #fff
+    width: 2em
+    height: 5px
+    border-radius: 1em
+    display: block
+    position: relative
+    top: 18px
+    right: 25px
+
+
+.header__mobile-menu-burger,
+.header__mobile-menu-burger::before,
+.header__mobile-menu-burger::after 
+    background-color: #fff
+    width: 2.2em
+    height: 3px
+    border-radius: 1em
+    transition: transform 250ms ease-in-out
+
+
+.header__mobile-menu-burger::before,
+.header__mobile-menu-burger::after  
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    
+
+.header__mobile-menu-burger::before
+    top: 8px
+
+
+.header__mobile-menu-burger::after 
+    bottom: 8px
+
+.nav-open .header__nav
+  transform: translateX(0)
+
+
+.nav-open .header__mobile-menu
+    position: fixed
+
+
+.nav-open .header__mobile-menu-burger
+    transform: rotate(.625turn)
+
+
+.nav-open .header__mobile-menu-burger::before 
+    transform: rotate(90deg) translateX(-8px)
+
+
+.nav-open .header__mobile-menu-burger::after 
+    opacity: 0
+    
+
+.nav-open.header__nav-list
+    display: block
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    z-index: 900
+    padding: 20px 0
+    overflow-y: scroll
+    max-height: 100vh
+    max-width: 100%
+    text-align: center
+    background: $header-open
+
+.active 
+    color: $header-active
+
+
+.header__home
+   padding: 14em 0 0 0
+   text-align: center
+   color: #fff
+   @include media-breakpoint-down(md)
+        padding: 9em 0 0 0 
+
+
+.header__home-title
+    font-family: $font-familyP
+    font-weight: 900
+    font-weight: 900
+    text-transform: capitalize
+    margin-top: 0
+    font-size: 32px
+   
+
+.line-decor
+    border-bottom: 1px solid  $aquamarine
+    width: 60px
+    margin: 0 auto 
+    padding: 1em 0 0 0 
+    @include media-breakpoint-down(lg) 
+       width: 60px
+       margin: 0 auto 
+       padding: 1em 0 0 0 
+
+
+.header__home-text 
+    font-size: 14px
+    font-weight: 300
+    margin: 1.7em 0 4em 0
+    line-height: 1.714
+
+        
+.section__about-img,
+.section__about-content
+    margin: 80px 0 0 0
+    align-items: center
+
+
+.section__about-img
+    @include media-breakpoint-up(md) 
+        padding-left: 0
+        padding-top: 5px
+    
+
+.section__about-image
+    margin: 0 auto
+    display: block
+    max-width: 100%
+    height: auto
+
+.section__about-title
+    font-family: $font-familyP
+    font-weight: 700
+    font-size: 22px
+    color: #413D4B
+    text-transform: uppercase
+    @include media-breakpoint-up(md) 
+        margin-top: 0
+    @include media-breakpoint-down(sm) 
+        text-align: center
+    
+
+.section__about-text
+    color: rgba(65, 61, 75, .749)
+    line-height: 1.571
+    margin: 20px 0 25px 0
+    font-size: 14px
+    font-weight: 300
+    
+
+.video
+    background-image: url('../images/video-bg.png')
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    margin-top: 70px
+        
+.video__content
+    height: 550px
+    padding: 199px 0 0 0
+
+.video__block
+    font-size: 16px
+    color: #fff
+    text-align: center
+    background: none
+    border: none
+    display: block
+    margin: 3px auto
+    font-weight: 900
+    letter-spacing: .5px
+    position: relative
+    
+        
+.video__play 
+    border: 3px solid #fff
+    width: 100px
+    height: 100px
+    display: block
+    border-radius: 50%
+    padding-top: 5px
+    background: none
+    transition: .2s ease-in-out
+    outline: $outline
+    margin: 5px auto 34px auto
+    &:hover
+        background: rgba(256,256,256,.1)
+    
+
+.video__title 
+    text-transform: uppercase
+    margin: 0
+    font-size: 1em
+
+
+.video__play-btn
+    position: relative
+    text-align: left
+    left: 35px
+    top: -2px
+    display: block
+
+
+.video__play-btn::before,
+.video__play-btn::after 
+    content: ''
+    position: absolute
+
+
+.video__play-btn,
+.video__play-btn::before,
+.video__play-btn::after 
+    width: 23px
+    height: 23px
+    border-top-right-radius: 20%
+
+
+.video__play-btn 
+    transform: rotate(30deg) skewX(-30deg) scale(1, .866)
+    border: 4px solid #fff
+    border-bottom: none
+    border-left: none
+    
+
+
+.video__play-btn::before 
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .717) translate(0, -50%)
+    border: 4px solid #fff
+    border-bottom: none
+    margin: -4px 0 0 0
+    border-left: none
+   
+
+
+.video__play-btn::after 
+    transform: rotate(135deg) skewY(-45deg) scale(.712, 1.414) translate(50%)
+    border: 4px solid #fff
+    border-bottom: none
+    margin-top: -4px
+    margin-left: 0px
+    border-left: none
+    
+
+.modal-window
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, .5)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+    display: none
+    justify-content: center
+    align-items: center
+    &.nav-open
+        display: flex
+    
+
+
+.modal-window__video
+    position: relative
+    top: 25%
+    background: #fff
+    padding: 10px
+    border-radius: 5px
+    max-width: 100%
+    max-height: 100%
+    width: 43%
+    height: 45%
+    margin: 0 auto
+    @include media-breakpoint-down(sm) 
+        height: 100%
+        width: 100%
+        margin: -40px 0 0 0 
+    @include media-breakpoint-up(md)
+        margin: -300px 40px 0 0
+        height: 250px 
+    @include media-breakpoint-up(xl)
+        height: 500px 
+        width: 600px
+
+    
+.modal-window__video-content
+    align-items: center
+
+
+.modal-window__video-close 
+    font-size: 20px
+    font-weight: 900
+    background: none
+    border: none
+    margin: 0 0 10px auto
+    display: block
+    outline: $outline
+
+
+.modal-window__video-visible
+    border: none
+    display: block
+    max-width: 100%
+    max-height: 100%
+    width: 100%
+    height: 230px
+    @include media-breakpoint-down(x400)
+        margin: -15px 0 0 0
+        height: 120px !important
+        width: 100%
+    @include media-breakpoint-down(sm)
+        height: 190px
+        width: 100%
+    @include media-breakpoint-up(md) 
+        height: 200px
+        width: 100%
+        margin: -10px 0 0 0
+    @include media-breakpoint-up(xl)
+        height: 430px
+        width: 100%
+        margin: -10px 0 0 0
+
+
+.expertise__head
+    font-family: $font-familyP
+    text-align: center
+    margin: 0 auto
+    margin: 65px 0 0 0
+
+
+.expertise__head-title
+    font-size: 22px
+    color: #413D4B
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: .75px
+
+
+.expertise__head-text
+    font-size: 14px
+    color: rgba(47, 45, 53, .749)
+    margin-top: 10px
+    letter-spacing: .75px
+
+
+.expertise__list 
+    margin: 0 auto
+    list-style-type: none
+    text-align: center
+    padding: 35px 0 0 0
+
+
+.expertise__item 
+    border-bottom: 1px solid #EAEAEA
+    border-right: 1px solid #EAEAEA
+    padding: 25px 
+    align-items: center
+    @include media-breakpoint-down(lg)
+        border-right: 1px solid #EAEAEA !important
+        border-bottom: 1px solid #EAEAEA !important
+        border-left: 1px solid #EAEAEA !important
+    
+
+.expertise__item-block
+    border-bottom: none
+    @include media-breakpoint-down(lg)
+        border-bottom: 1px solid #EAEAEA !important
+
+
+.expertise__head-line
+    border-bottom: 2px solid #C5C4C8
+    width: 60px
+    margin: 0 auto 
+    padding: 1em 0 0 0 
+    
+
+.expertise__item-img
+    padding-bottom: 34px
+
+
+.expertise__item-title
+    font-size: 14px
+    color: #413D4B
+    font-weight: 900
+    text-transform: uppercase
+    margin-bottom: 17px
+    margin-top: 23px
+    letter-spacing: .5px
+
+
+.expertise__item-text 
+    letter-spacing: .5px
+    font-size: 14px
+    color: rgba(51, 51, 51, .749)
+    line-height: 1.571
+    font-weight: 300
+
+
+.expertise__list
+    margin-bottom: 54px
+    
+    
+.section-teams
+    background-image: url(../images/team-bg.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    text-align: center
+    max-width: 100%
+    padding: 0 0 40px 0
+
+
+.section-teams__item
+    margin: 0 auto
+    padding: 64px 0 0 0 
+
+
+.section-teams__item-title
+    font-size: 22px
+    color: #fff
+    font-family: $font-familyP
+    font-size: 22px
+    font-weight: 700
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 0
+    letter-spacing: .5px
+
+
+.section-teams__item-text
+    font-size: 14px
+    color: #F9F9F9
+    margin-top: 12px
+    font-family: $font-familyP
+    letter-spacing: .75px
+
+    
+.teams-line
+    border-bottom: 3px solid #655D80
+    width: 60px
+    margin: 0 auto 
+    padding: 0 
+
+    
+.section-teams__cards
+    margin: 2em 4em 0 4em
+    @include media-breakpoint-down(lg)
+        margin: 2em 0 0 0
+
+
+.section-teams__cards-item 
+    border: 1px solid #7E7A92
+    transition: .3s ease-in-out
+    max-width: 231px
+    margin: 10px auto 60px auto
+    padding: 0 !important
+    &:hover
+        background: rgba(255, 255, 255, .1)
+
+
+.section-teams__cards-foto
+    height: 229px
+    max-height: 229px
+    max-width: 100%
+    width: 100%
+    background: #fff
+
+
+.section-teams__cards-name
+    font-size: 14px
+    color: #F3F3F5
+    font-weight: 900
+    padding: 16px 0 0 0
+
+
+.section-teams__cards-profession
+    font-weight: 300
+    color: #AFADBC
+    font-size: 13px
+    padding: 0 0 10px 0
+
+
+.section-teams__cards-content
+    margin: 0 auto
+
+
+.section-teams__cards-text
+    margin-top: 0
+    margin-bottom: 29px
+    color: #F3F3F3
+    font-weight: 300
+    font-size: 14px
+    letter-spacing: .5px
+    margin-bottom: 24px
+    text-align: center
+
+
+.works 
+     padding: 65px 0 70px 0 
+
+
+.works__head
+    color: #413D4B
+    margin-bottom: 65px
+    letter-spacing: .5px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include media-breakpoint-down(x400)
+        flex-wrap: wrap
+
+
+.works__title
+    font-size: 22px
+    font-family: $font-familyP
+    font-weight: 700
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 0
+    
+
+.works__link
+    font-size: 14px
+    text-align: right
+    color: inherit
+    font-weight: 300
+    text-decoration: $text-decor
+    transition: .3s ease-in-out
+    &::after
+        content: ''
+        border: 1px solid #413D4B
+        height: .7em
+        width: .7em
+        margin-left: 10px
+        display: inline-block
+        border-left: none
+        border-top: none
+        transform: rotate(-45deg)
+    &:hover
+        color: #AFD3F9
+    @include media-breakpoint-down(x400)
+        margin: 15px 0 0 0
+
+
+.works__portfolio
+    list-style-type: none
+    align-items: center
+    padding: 0
+
+
+.works__portfolio-item 
+    padding: 0
+    &:nth-of-type(12n + 1),
+    &:nth-of-type(12n + 5),
+    &:nth-of-type(12n + 12),
+    &:nth-of-type(12n + 8)
+        .works__portfolio-content 
+            background: #B6B6B6
+    &:nth-of-type(12n + 2),
+    &:nth-of-type(12n + 11)
+        .works__portfolio-content 
+            background: #ACACAC
+    &:nth-of-type(12n + 3),
+    &:nth-of-type(12n + 10) 
+        .works__portfolio-content 
+            background: #A1A1A1
+    &:nth-of-type(12n + 4),
+    &:nth-of-type(12n + 9) 
+        .works__portfolio-content 
+            background:#8A8A8A
+    &:nth-of-type(12n + 6),
+    &:nth-of-type(12n + 7)
+        .works__portfolio-content
+            background: #A4A4A4
+        
+
+.works__portfolio-link 
+    display: block
+    &:hover
+        .works__portfolio-content 
+            opacity: .7
+
+
+.works__portfolio-content
+    width: 268px
+    height: 200px
+    max-width: 100%
+    max-height: 100%
+    object-fit: cover
+    @include media-breakpoint-down(md)
+        margin: 0 auto
+        height: 260px
+
+
+.works__button
+    text-align: center
+    margin-top: 30px   
+    margin-top: 55px
+    @include media-breakpoint-up(sm) 
+        margin-top: 55px
+
+
+.works__btn 
+    min-width: 140px
+
+
+.people-say 
+    text-align: center
+    padding-bottom: 20px
+    background-image: url(../images/people-bg.png)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 500px
+    max-height: 100%
+    @include media-breakpoint-up(xl)
+        height: 550px
+    @include media-breakpoint-down(x480)
+        height: 600px
+    
+
+.people-say__list
+    list-style-type: none
+    margin: 7em 0 0 0
+    padding: 0 0 0 15px
+    @include media-breakpoint-down(sm)
+        padding: 0
+
+
+.people-say__block
+    position: relative
+    padding-top: 46px
+    &:before 
+        content: '\201c'
+        font-size: 100px
+        font-family: $font-familyP
+        color: rgba(255, 255, 255, 0.902)
+        display: block
+        position: absolute
+        left: 0
+        display: block
+        width: 100%
+        max-width: 100%
+
+.people-say__item.slick-slide.slick-current.slick-active
+    outline: none 
+
+.people-say__slider-item.slick-slide
+    height: 89px
+    outline: none
+.people-say__slider-block
+    height: 54px
+    @include media-breakpoint-up(sm) 
+        width: 74px
+        height: 74px
+    
+        
+.people-say__slider-list
+    display: flex
+    justify-content: center
+    list-style-type: none
+    align-items: center
+
+.people-say__opinion 
+    color: #E0DEE5
+    font-family: $font-familyP
+
+
+.people-say__name
+    color: #fff
+    font-weight: 900
+    font-size: 14px
+    margin: 20px 0 0 0
+
+
+.people-say__position
+    color: #BFBBC9
+    font-size: 13px
+    font-weight: 300
+
+
+.people-say__nav-slider-block
+    height: 54px
+
+
+.people-say__nav-slider-img
+    display: block
+    max-width: 100%
+    max-height: 100%
+    height: 45px
+    width: 45px
+    transition: .3s ease-in-out
+    &:hover 
+        transform: scale(1.5)
+    @include media-breakpoint-up(sm) 
+        height: 45px
+        width: 45px
+    
+    
+@include media-breakpoint-down(md)      
+    .people-say__list.slick-slide 
+        padding: 0 10px 0 10px
+    
+@include media-breakpoint-up(sm) 
+    .slick-list.slick-track 
+            transform: none !important
+
+.userpic-dot__btn 
+    padding: 0
+    background: none
+    border: none
+    border-radius: 50% 
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 20px 14px 69px 0
+    width: 50px
+    height: 50px
+    outline: $outline
+    @include media-breakpoint-up(sm) 
+        width: 70px
+        height: 70px
+    
+.contact-us
+    text-align: center
+    padding: 64px 0 70px 0
+
+
+.contact-us__head
+    padding: 0 0 29px 0
+
+
+.contact-us__title 
+    color: #413D4B
+    font-family: $font-familyP
+    font-size: 22px
+    margin-top: 0
+    margin-bottom: 30px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: .5px
+
+
+.contact-us-form
+    display: flex
+    flex-direction: column
+
+
+.contact-us__input
+    margin: 0 0 21px 0
+    padding: 13px 0 13px 21px
+    width: 100%
+    border: 1px solid #E5E5E5
+    font-size: 14px
+    color: rgba(65, 61, 75, .5)
+    &::placeholder 
+        color: rgba(65, 61, 75, .5)
+
+
+.contact-us__massage
+    margin: 0 0 21px 0
+    padding: 17px 0 164px 21px
+    width: 100%
+    border: 1px solid #E5E5E5
+    font-size: 14px
+    color: rgba(65, 61, 75, .5)
+    &::placeholder 
+        color: rgba(65, 61, 75, .5)
+    resize: none
+      
+
+.footer
+    background-image: url('../images/footer-bg.png')
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    color: #fff
+    padding-bottom: 65px
+    font-size: 14px
+    max-width: 100%
+    max-height: 100%
+
+
+.footer__block
+    margin: 70px 0 0 0
+    align-items: center
+    
+
+        
+
+.footer__text
+    line-height: 1.857
+    font-weight: 300
+    margin-top: 18px
+    letter-spacing: .25px
+    max-width: 100%
+
+
+.footer__list
+    list-style-type: none
+    line-height: 1.857
+    letter-spacing: .25px
+    margin-top: 20px
+    margin-bottom: 0
+    text-transform: uppercase
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 69px
+    @include media-breakpoint-down(sm)
+        padding: 0  !important
+    @include media-breakpoint-down(lg)
+        padding: 0 100px 0 100px   
+    @include media-breakpoint-up(lg)
+        padding: 0
+
+
+.footer__tel
+    padding: 1px 0 0 0
+
+
+.footer__link
+    color: #fff
+    margin-right: 20px
+    text-decoration: $text-decor
+    &:hover
+        color: #fff
+    @include media-breakpoint-up(xs)
+        margin: 0
+
+
+.footer__main
+    margin: 10px 0 0 60px
+    @include media-breakpoint-up(xs)
+        margin: 0 auto
+
+
+.footer__address-head
+    font-size: 15px
+    text-transform: uppercase
+    font-weight: 900
+    margin: 14px 0 24px 0
+    letter-spacing: .5px
+    padding: 0 0 12px 0
+    align-items: center
+    @include media-breakpoint-up(xs)
+        text-align: center
+    @include media-breakpoint-up(md)
+        text-align: left
+
+
+.footer__address-item
+    line-height: 1.857
+    letter-spacing: .25px
+    margin: -10px 0 0 0
+
+
+.footer__address-list
+    padding: 0 0 0 30px
+    list-style-type: none
+    @include media-breakpoint-up(x350)
+        padding: 0 0 0 20%
+    @include media-breakpoint-up(x450)
+        padding: 0 0 0 30%
+    @include media-breakpoint-up(sm)
+        padding: 0 0 0 32%
+    @include media-breakpoint-up(md)
+        padding: 0 0 0 30px
+        
+
+.footer__icon-block
+    position: relative
+    width: 28px
+    height: 100%
+    display: block
+    padding-top: 3px
+
+
+.footer__tel 
+    line-height: 1.857
+    font-weight: 300
+    margin-top: 15px
+    letter-spacing: .25px
+
+
+.footer__tel-link
+    text-decoration: $text-decor
+    color: #FFF
+    &:hover
+        color: #FFF
+
+
+.footer__icon-marker
+    position: absolute
+    top: 2px
+    left: -28px
+
+
+.footer__icon-telephone
+    position: absolute
+    left: -28px
+    top: 0
+
+
+.footer__social
+    margin: 70px 0 0 -30px
+    padding: 0
+    @include media-breakpoint-up(xs)
+        margin: 70px 0 0 0
+
+    
+.subscribe 
+    display: flex
+    align-items: center
+    margin: 35px 0 27px 0
+    max-width: 100%
+    @include media-breakpoint-up(x350)
+        justify-content: center
+    @include media-breakpoint-up(md)
+        justify-content: left
+
+
+.subscribe__input 
+    background: none
+    padding-left: 16px
+    padding-right: 16px
+    border: 1px solid rgba(255, 255, 255, .5)
+    width: 210px
+    max-width: 210px
+    margin-right: 10px
+    height: 45px
+    color: rgba(255, 255, 255, .75)
+    letter-spacing: .5px
+    &::placeholder 
+        color: rgba(255, 255, 255, .75)
+    &:hover,
+    &:focus 
+        background: rgba(255, 255, 255, .1)
+    
+    
+.subscribe__btn 
+    border: none
+    background: rgba(255, 255, 255, .5)
+    width: 70px
+    height: 45px
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover,
+    &:focus 
+        background: rgba(255, 255, 255, .3)
+
+
+.footer__social-list
+    display: flex
+    list-style-type: none
+    align-items: center
+    padding: 0 
+    @include media-breakpoint-up(xs)
+        margin: 0 10px 0
+    @include media-breakpoint-up(x350)
+        justify-content: center
+    @include media-breakpoint-up(md)
+        justify-content: left
+
+
+.footer__social-item
+    padding: 0 0 0 8px
+
+
+.footer__social-link
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid #fff
+    border-radius: 50%
+    text-decoration: $text-decor
+    &:hover 
+        background: rgba(255, 255, 255, .1)
+
+
+.fa-facebook-f
+    padding: 10px 14px
+    font-size: 15px
+
+
+.fa-twitter
+    padding: 11px 11px
+    font-size: 13px
+
+
+.fa-dribbble
+    padding: 10px 10px
+    font-size: 14px
+
+
+.fa-instagram
+    padding: 10px 10px
+    font-size: 14px
+
+
+.fa-google-plus-g
+    padding: 9px 7px
+    font-size: 16px
+    
+
+.fa-youtube
+    padding: 10px 9px
+    font-size: 14spx
+    
+
+.footer__social-copyright 
+    font-size: 14px
+    display: block
+    letter-spacing: .25px
+    margin-top: 65px
+    text-align: center
+
+    
+    
+        
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+    
+
+    
