@@ -2,7 +2,7 @@
 Frontnet internship test assignment
 ## Project setup
 ```
-$ git clone https://github.com/krasnovdanial/SURFing.git or download it into a directory of your choice.
+$ git clone https://github.com/krasnovdanial/Nutnet-frontend-test.git or download it into a directory of your choice.
 ```
 
 ```
